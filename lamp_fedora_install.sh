@@ -17,8 +17,8 @@ dnf -y install php php-common php-mysqlnd php-gd php-imap php-xml php-cli php-op
 systemctl restart httpd
 
 echo '<?php' > /var/www/html/info.php
-echo ' echo phpinfo();' > /var/www/html/info.php
-echo '?>' > /var/www/html/info.php
+echo ' echo phpinfo();' >> /var/www/html/info.php
+echo '?>' >> /var/www/html/info.php
 chomd 777 /var/www/html/info.php
 echo LAMP was installed.
 echo open http://localhost/info.php
